@@ -1,0 +1,28 @@
+{
+  "name": "service_report_api",
+  "version": "1.0.0",
+  "description": "Generacion de reportes .xlsx .csv",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "DEBUG=worker:* NODE_ENV=develop nodemon server.js",
+    "devW": "SET DEBUG=worker:*&& SET NODE_ENV=develop&& nodemon server.js"
+  },
+  "engines": {
+    "node": "12.15.0"
+  },
+  "author": "Magic-Log S.A de C.V",
+  "license": "MIT",
+  "dependencies": {
+    "@hapi/joi": "^17.1.1",
+    "cookie-parser": "^1.4.5",
+    "cors": "^2.8.5",
+    "debug": "^4.1.1",
+    "exceljs": "^4.1.1",
+    "express": "^4.17.1",
+    "moment": "^2.27.0",
+    "nodemon": "^3.0.1",
+    "pg": "^8.3.0",
+    "yarn": "^1.22.22"
+  }
+}
