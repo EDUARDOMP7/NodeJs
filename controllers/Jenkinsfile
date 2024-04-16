@@ -13,11 +13,5 @@ pipeline {
                 bat 'npm test'
             }
         }
-        stage('Docker Build') {
-            steps {
-                // Construir la imagen de Docker
-                bat 'docker build -t my-docker-image .'
-            }
-        }
     }
 }
