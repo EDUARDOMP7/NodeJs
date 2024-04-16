@@ -3,11 +3,11 @@
 pipeline {
     agent any
     stages {
-        stage('Install') {
+        /* stage('Install') {
             steps {
                 echo 'Installing'
             }
-        }
+        } */
         stage('Test') {
             steps {
                 dir(Api_pruebas) {
@@ -15,11 +15,11 @@ pipeline {
                 }
             }
         }
-        stage('Docker Build') {
+      /*   stage('Docker Build') {
             steps {
                 echo 'Docker'
             }
-        }
+        } */
     // Otras etapas aquí...
     }
 }
