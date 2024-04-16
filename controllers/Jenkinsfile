@@ -22,7 +22,7 @@ pipeline {
 
         stage('Deploy') {
             steps {
-            // Aquí puedes agregar pasos para desplegar tu aplicación, por ejemplo, enviarla a un servidor
+                // Aquí puedes agregar pasos para desplegar tu aplicación, por ejemplo, enviarla a un servidor
             }
         }
     }
@@ -36,4 +36,3 @@ pipeline {
         }
     }
 }
-
