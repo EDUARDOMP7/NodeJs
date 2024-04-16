@@ -5,19 +5,21 @@ pipeline {
     stages {
         stage('Install') {
             steps {
-                // Pasos de instalación
+            // Pasos de instalación
             }
         }
         stage('Test') {
             steps {
-                // Pasos de pruebas
+                dir(Api_pruebas) {
+                    sh 'npm test'
+                }
             }
         }
         stage('Docker Build') {
             steps {
-                // Pasos de construcción de Docker
+            // Pasos de construcción de Docker
             }
         }
-        // Otras etapas aquí...
+    // Otras etapas aquí...
     }
 }
