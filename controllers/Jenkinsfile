@@ -1,0 +1,23 @@
+/* groovylint-disable-next-line CompileStatic */
+/* groovylint-disable CompileStatic */
+pipeline {
+    agent any
+    stages {
+        stage('Install') {
+            steps {
+                // Pasos de instalación
+            }
+        }
+        stage('Test') {
+            steps {
+                // Pasos de pruebas
+            }
+        }
+        stage('Docker Build') {
+            steps {
+                // Pasos de construcción de Docker
+            }
+        }
+        // Otras etapas aquí...
+    }
+}
