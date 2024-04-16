@@ -2,24 +2,27 @@
 /* groovylint-disable CompileStatic */
 pipeline {
     agent any
+
     stages {
-        /* stage('Install') {
+        stage('Install Dependencies') {
             steps {
-                echo 'Installing'
-            }
-        } */
-        stage('Test') {
-            steps {
-                dir(Api_pruebas) {
-                    sh 'npm test'
-                }
+                // Instalación de dependencias utilizando npm
+                sh 'npm install'
             }
         }
-      /*   stage('Docker Build') {
+
+        stage('Run Tests') {
             steps {
-                echo 'Docker'
+                // Ejecución de pruebas utilizando npm
+                sh 'npm test'
             }
-        } */
-    // Otras etapas aquí...
+        }
+
+        stage('Build Docker Image') {
+            steps {
+                // Construcción de una imagen Docker
+                sh 'docker build -t nombre_de_la_imagen .'
+            }
+        }
     }
 }
