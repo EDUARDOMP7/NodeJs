@@ -13,5 +13,18 @@ pipeline {
                 bat 'npm test'
             }
         }
+        stage('Deploy') {
+            steps {
+            // Aquí puedes agregar pasos para desplegar tu aplicación, por ejemplo, enviarla a un servidor
+            }
+        }
+    }
+    post {
+        success {
+            echo 'El build ha sido exitoso. ¡Enhorabuena!'
+        }
+        failure {
+            echo 'El build ha fallado. Por favor, revisa los errores.'
+        }
     }
 }
