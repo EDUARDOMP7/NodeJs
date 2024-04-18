@@ -26,6 +26,11 @@
     "yarn": "^1.22.22"
   },
   "devDependencies": {
-    "eslint": "^7.32.0"
+    "chai": "^4.4.1",
+    "eslint": "^7.32.0",
+    "jest": "^27.5.1",
+    "mocha": "^8.4.0",
+    "sinon": "^17.0.1",
+    "supertest": "^6.3.4"
   }
 }
