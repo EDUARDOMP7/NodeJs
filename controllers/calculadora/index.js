@@ -1,4 +1,4 @@
-const Joi = require('@hapi/joi');
+const Joi = require("@hapi/joi");
 
 exports.suma = async (req, res, next) => {
   let { body } = req;
@@ -9,7 +9,7 @@ exports.suma = async (req, res, next) => {
       return res.status(500).send({
         data: {
           success: false,
-          message: 'No se recibieron datos :C',
+          message: "No se recibieron datos :C",
           code: 500,
         },
       });
@@ -23,7 +23,7 @@ exports.suma = async (req, res, next) => {
     await schema.validateAsync(body);
     const { num1, num2 } = body;
     const result = Number(num1) + Number(num2);
-     req.total = result;
+    req.total = result;
     next();
     // return res.status(200).send({
     //   data: {
@@ -49,16 +49,15 @@ exports.saveOperation = async (req, res, next) => {
   let { body } = req;
   console.log(body);
 
-   return res.status(200).send({
-      data: {
-        success: true,
-        message: 'Suma realizada con éxito',
-        code: 200,
-        result: req.total,
-      },
-    });
-
-}
+  return res.status(200).send({
+    data: {
+      success: true,
+      message: "Suma realizada con éxito",
+      code: 200,
+      result: req.total,
+    },
+  });
+};
 
 exports.resta = async (req, res, next) => {
   let { body } = req;
@@ -69,7 +68,7 @@ exports.resta = async (req, res, next) => {
       return res.status(500).send({
         data: {
           success: false,
-          message: 'No se recibieron datos :C',
+          message: "No se recibieron datos :C",
           code: 500,
         },
       });
@@ -86,7 +85,7 @@ exports.resta = async (req, res, next) => {
     return res.status(200).send({
       data: {
         success: true,
-        message: 'Resta realizada con éxito',
+        message: "Resta realizada con éxito",
         code: 200,
         result,
       },
@@ -101,7 +100,7 @@ exports.resta = async (req, res, next) => {
       },
     });
   }
-}
+};
 
 exports.division = async (req, res, next) => {
   let { body } = req;
@@ -112,7 +111,7 @@ exports.division = async (req, res, next) => {
       return res.status(500).send({
         data: {
           success: false,
-          message: 'No se recibieron datos :C',
+          message: "No se recibieron datos :C",
           code: 500,
         },
       });
@@ -129,7 +128,7 @@ exports.division = async (req, res, next) => {
     return res.status(200).send({
       data: {
         success: true,
-        message: 'División realizada con éxito',
+        message: "División realizada con éxito",
         code: 200,
         result,
       },
@@ -144,7 +143,7 @@ exports.division = async (req, res, next) => {
       },
     });
   }
-}
+};
 
 exports.multiplicacion = async (req, res, next) => {
   let { body } = req;
@@ -155,7 +154,7 @@ exports.multiplicacion = async (req, res, next) => {
       return res.status(500).send({
         data: {
           success: false,
-          message: 'No se recibieron datos :C',
+          message: "No se recibieron datos :C",
         },
       });
     }
@@ -171,7 +170,7 @@ exports.multiplicacion = async (req, res, next) => {
     return res.status(200).send({
       data: {
         success: true,
-        message: 'Multiplicación realizada con éxito',
+        message: "Multiplicación realizada con éxito",
         code: 200,
         result,
       },
@@ -186,4 +185,4 @@ exports.multiplicacion = async (req, res, next) => {
       },
     });
   }
-}
+};
