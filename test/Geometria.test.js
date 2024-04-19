@@ -1,5 +1,4 @@
-
-const { calcularAreaRectangulo } = require("../geometria");
+const { calcularAreaRectangulo } = require("./geometria");
 
 const { expect } = require("chai");
 
